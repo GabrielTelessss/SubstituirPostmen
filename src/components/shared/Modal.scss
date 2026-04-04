@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__panel {
+  position: relative;
+  width: min(920px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  background: $bg-tertiary;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 12px;
+  border-bottom: 1px solid $border-color;
+}
+
+.modal__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.modal__close {
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+  color: $text-primary;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal__body {
+  padding: 12px;
+}

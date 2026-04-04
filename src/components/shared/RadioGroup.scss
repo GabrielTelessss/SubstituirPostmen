@@ -1,0 +1,40 @@
+@use '../../styles/variables' as *;
+
+.radioGroup {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.radioGroup__label {
+  font-size: 12px;
+  color: $text-secondary;
+  padding: 0;
+}
+
+.radioGroup__options {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.radioGroup__option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: $text-primary;
+}
+
+.radioGroup__option input {
+  width: 16px;
+  height: 16px;
+  accent-color: $accent;
+}
+
+.radioGroup__text {
+  user-select: none;
+}

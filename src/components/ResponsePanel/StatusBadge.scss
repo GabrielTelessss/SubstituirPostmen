@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+}
+
+.statusBadge--pending {
+  color: $text-muted;
+}
+
+.statusBadge--success {
+  color: $success;
+}
+
+.statusBadge--warning {
+  color: $warning;
+}
+
+.statusBadge--error {
+  color: $error;
+}

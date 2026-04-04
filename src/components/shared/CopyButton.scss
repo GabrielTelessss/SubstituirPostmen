@@ -1,0 +1,16 @@
+@use '../../styles/variables' as *;
+
+.copyButton {
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+  color: $text-primary;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copyButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

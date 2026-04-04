@@ -1,0 +1,130 @@
+@use '../../styles/variables' as *;
+
+.responsePanel {
+  padding: 16px;
+}
+
+.responsePanel__header {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $border-color;
+  margin-bottom: 12px;
+}
+
+.responsePanel__status {
+  display: grid;
+  gap: 6px;
+}
+
+.responsePanel__time {
+  font-size: 12px;
+  color: $text-muted;
+}
+
+.responsePanel__meta {
+  display: grid;
+  gap: 4px;
+  text-align: right;
+  color: $text-muted;
+  font-size: 12px;
+}
+
+.responsePanel__metaItem {
+  white-space: nowrap;
+}
+
+.responsePanel__sections {
+  display: grid;
+  gap: 12px;
+}
+
+.responsePanel__copy {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+
+.responsePanel__cors {
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: $text-muted;
+  font-size: 12px;
+}
+
+.responsePanel__errors {
+  display: grid;
+  gap: 10px;
+}
+
+.responsePanel__errorItem {
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.responsePanel__errorCode {
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.responsePanel__errorMsg {
+  color: $text-primary;
+  font-size: 13px;
+}
+
+.responsePanel__errorFix {
+  color: $text-muted;
+  font-size: 12px;
+}
+
+.responsePanel__kv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 12px;
+}
+
+@media (max-width: 960px) {
+  .responsePanel__kv {
+    grid-template-columns: 1fr;
+  }
+}
+
+.responsePanel__kvItem {
+  border: 1px solid $border-color;
+  background: $bg-secondary;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.responsePanel__kvKey {
+  font-size: 12px;
+  color: $text-muted;
+}
+
+.responsePanel__kvVal {
+  font-size: 13px;
+  color: $text-primary;
+  overflow-wrap: anywhere;
+}
+
+.responsePanel__link {
+  color: $text-primary;
+}
+
+.responsePanel__pre {
+  margin: 0;
+  white-space: pre;
+  overflow: auto;
+  color: $text-primary;
+  font-size: 12px;
+}

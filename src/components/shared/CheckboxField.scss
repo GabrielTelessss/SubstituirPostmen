@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.checkboxField {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: $text-primary;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkboxField input {
+  width: 16px;
+  height: 16px;
+  accent-color: $accent;
+}
+
+.checkboxField__label {
+  user-select: none;
+}

@@ -1,0 +1,60 @@
+@use './styles/reset';
+@use './styles/variables' as *;
+
+:root {
+  --header-height: 56px;
+}
+
+body {
+  background: $bg-primary;
+  color: $text-primary;
+  font-family: $font-family;
+}
+
+a {
+  color: $accent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.app__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.app__panel {
+  min-height: calc(100vh - var(--header-height));
+  overflow: auto;
+}
+
+.app__panel--left {
+  background: $bg-secondary;
+  border-right: 1px solid $border-color;
+}
+
+.app__panel--right {
+  background: $bg-primary;
+}
+
+@media (max-width: 960px) {
+  .app__main {
+    grid-template-columns: 1fr;
+  }
+
+  .app__panel--left {
+    border-right: 0;
+    border-bottom: 1px solid $border-color;
+  }
+}
