@@ -170,7 +170,7 @@ export default function buildJson(formState) {
           {
             descricao: formState.notaFiscal.item.descricao,
             quantidade: itemQuantidade,
-            valor: itemValor,
+            valor: toNumber(formState.notaFiscal.subTotal),
             tipSerCodigo: toNumber(formState.notaFiscal.tipSerCodigo),
             baseISSQN,
             percISSQN: toNumber(tributos.issqn.percentual),
