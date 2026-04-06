@@ -247,7 +247,7 @@ export default function FormPanel({ onSend, sending = false }) {
           descricao: firstItem?.descricao || '',
           quantidade: String(firstItem?.quantidade ?? ''),
           valorUnitario:
-            String(firstItem?.quantidade ? toNumber(firstItem?.valor) / toNumber(firstItem?.quantidade) : firstItem?.valor ?? ''),
+            String(firstItem?.quantidade ? toNumber(first.valorBruto) / toNumber(firstItem?.quantidade) : first.valorBruto ?? ''),
           codigoServico: String(firstItem?.tipSerCodigo ?? ''),
         },
       }

@@ -30,9 +30,6 @@ export default function buildJson(formState) {
   const flags = formState.notaFiscal.flagsTributos
 
   const itemQuantidade = toNumber(formState.notaFiscal.item.quantidade)
-  const itemValorUnitario = toNumber(formState.notaFiscal.item.valorUnitario)
-  const itemValor =
-    itemQuantidade > 0 && itemValorUnitario > 0 ? itemQuantidade * itemValorUnitario : valorBruto
 
   const baseISSQN = toNumber(tributos.issqn.base) || valorBruto
   const baseINSS = toNumber(tributos.inss.base) || valorBruto
@@ -170,7 +167,7 @@ export default function buildJson(formState) {
           {
             descricao: formState.notaFiscal.item.descricao,
             quantidade: itemQuantidade,
-            valor: toNumber(formState.notaFiscal.valorBruto),
+            valor: valorBruto,
             tipSerCodigo: toNumber(formState.notaFiscal.tipSerCodigo),
             baseISSQN,
             percISSQN: toNumber(tributos.issqn.percentual),
